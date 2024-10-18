@@ -40,10 +40,10 @@ TYPE_DATASET=1      #0 for binary, 1 for regression
 #VAL_IMG_DIR="data/Catello_verdura/TRANSFER_LEARNING/test_rgb_filter/" if TYPE_DATASET==0 else "data/LANDMARK50/test_images/"
 #VAL_MASK_DIR="data/Catello_verdura/TRANSFER_LEARNING/test_ndvi_filter/" if TYPE_DATASET==0 else "data/LANDMARK50/test_masks/"
 ###### TRANSFER LEARNING 
-TRAIN_IMG_DIR="data/Catello_verdura/TRANSFER_LEARNING/train_transfer_rgb/" if TYPE_DATASET==0 else "data/Catello_verdura/TRANSFER_LEARNING/FILTERED/train_rgb_filter/"
-TRAIN_MASK_DIR="data/Catello_verdura/TRANSFER_LEARNING/train_transfer_ndvi/" if TYPE_DATASET==0 else "data/Catello_verdura/TRANSFER_LEARNING/FILTERED/train_ndvi_filter/"
-VAL_IMG_DIR="data/Catello_verdura/TRANSFER_LEARNING/test_rgb_filter/" if TYPE_DATASET==0 else "data/Catello_verdura/TRANSFER_LEARNING/FILTERED/test_rgb_filter/"
-VAL_MASK_DIR="data/Catello_verdura/TRANSFER_LEARNING/test_ndvi_filter/" if TYPE_DATASET==0 else "data/Catello_verdura/TRANSFER_LEARNING/FILTERED/train_ndvi_filter/"
+TRAIN_IMG_DIR="data/dataRegression/train_images/" if TYPE_DATASET==0 else "data/Catello_verdura/TRANSFER_LEARNING/FILTERED/train_rgb_filter/"
+TRAIN_MASK_DIR="data/dataRegression/train_index/" if TYPE_DATASET==0 else "data/Catello_verdura/TRANSFER_LEARNING/FILTERED/train_ndvi_filter/"
+VAL_IMG_DIR="data/Catello_verdura/TRANSFER_LEARNING/val_images/" if TYPE_DATASET==0 else "data/Catello_verdura/TRANSFER_LEARNING/FILTERED/test_rgb_filter/"
+VAL_MASK_DIR="data/Catello_verdura/TRANSFER_LEARNING/val_index/" if TYPE_DATASET==0 else "data/Catello_verdura/TRANSFER_LEARNING/FILTERED/train_ndvi_filter/"
 
 
 def train_fn(loader, model, optimizer, loss_fn, scaler):
