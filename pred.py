@@ -19,16 +19,12 @@ IMAGE_HEIGHT=340 #number of rows
 IMAGE_WIDTH=450 #number of colums
 LOAD_MODEL=True#False
 
-### MODEL SELECTION
-TYPE_DATASET=0      #0 for binary, 1 for regression
-## Enter 0 for binary classification using VeGan dataset by Madec, S., et al. Sci Data 10, 302 (2023).
-## Enter 1 for NDVI prediction using Vie-Net
+TYPE_DATASET=1      #0 for binary, 1 for regression
 
-## INPUT SELECTION
-INPUT_IMG_DIR="../../AIIA_CIRO_RISO/NDVI/IMGS/" 
-OUTPUT_FOLDER="../../AIIA_CIRO_RISO/NDVI/pred_NDVI2"
-CHECKPOINT = "RESULTS\Luciano_checkpoints_V-net/my_checkpoint.pth.tar" # for Vie-Net
-#CHECKPOINT = "saves/checkpoints/my_checkpoint_binary.pth.tar" # for bynary
+INPUT_IMG_DIR="../../AIIA_CIRO_RISO/NDVI/IMGS/" if TYPE_DATASET==0 else "../../AIIA_CIRO_RISO/NDVI/IMGS/"
+OUTPUT_FOLDER="../../AIIA_CIRO_RISO/NDVI/pred_NDVI"
+CHECKPOINT = "RESULTS\Luciano_checkpoints_V-net/my_checkpoint.pth.tar"
+#CHECKPOINT = "saves/checkpoints/my_checkpoint_binary.pth.tar"
 
 def load_checkpoint(checkpoint, model):
     print("=> Loading checkpoint")
@@ -71,6 +67,11 @@ def save_predictions_as_imgs(loader, model, folder, type_data, device):
         torchvision.utils.save_image(preds, f"{folder}/pred_{idx+1}.png")
         torchvision.utils.save_image(x, f"{folder}/RGB_{idx+1}.png")
     
+def save_dir_name(dir_name):
+        if not os.path.exists(dir_name): 
+            os.makedirs(dir_name)
+        else:
+            save_dir_name(dir_name+"_old")
 
 def main():
     
@@ -98,12 +99,13 @@ def main():
     i=0
     folder=OUTPUT_FOLDER
     if not os.path.exists(folder): 
-        os.makedirs(folder)
+        os.makedirs(folder) 
     else:
-        i=int(folder[10])
-        i=i+1 
-        folder = folder+str(i)
-        os.makedirs(folder)
+         save_dir_name(folder+"_old")
+
+     #   i=i+1 
+     #   folder = folder+str(i)
+     #  os.makedirs(folder)
     save_predictions_as_imgs(pred_loader, model, OUTPUT_FOLDER, TYPE_DATASET, device=DEVICE)
   
 
