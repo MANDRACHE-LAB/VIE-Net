@@ -70,9 +70,10 @@ def save_predictions_as_imgs(loader, model, folder, type_data, device):
 def save_dir_name(dir_name):
         if not os.path.exists(dir_name): 
             os.makedirs(dir_name)
+            return dir_name
         else:
-            save_dir_name(dir_name+"_old")
-
+            fn = save_dir_name(dir_name+"_old")
+            return fn
 def main():
     
     pred_transform=A.Compose(
@@ -101,12 +102,8 @@ def main():
     if not os.path.exists(folder): 
         os.makedirs(folder) 
     else:
-         save_dir_name(folder+"_old")
-
-     #   i=i+1 
-     #   folder = folder+str(i)
-     #  os.makedirs(folder)
-    save_predictions_as_imgs(pred_loader, model, OUTPUT_FOLDER, TYPE_DATASET, device=DEVICE)
+         folder = save_dir_name(folder+"_old")
+    save_predictions_as_imgs(pred_loader, model, folder, TYPE_DATASET, device=DEVICE)
   
 
 if __name__ == "__main__":
