@@ -19,12 +19,16 @@ IMAGE_HEIGHT=340 #number of rows
 IMAGE_WIDTH=450 #number of colums
 LOAD_MODEL=True#False
 
+### MODEL SELECTION
 TYPE_DATASET=0      #0 for binary, 1 for regression
+## Enter 0 for binary classification using VeGan dataset by Madec, S., et al. Sci Data 10, 302 (2023).
+## Enter 1 for NDVI prediction using Vie-Net
 
-INPUT_IMG_DIR="../../AIIA_CIRO_RISO/NDVI/IMGS/" if TYPE_DATASET==0 else "../../AIIA_CIRO_RISO/NDVI/IMGS/"
+## INPUT SELECTION
+INPUT_IMG_DIR="../../AIIA_CIRO_RISO/NDVI/IMGS/" 
 OUTPUT_FOLDER="../../AIIA_CIRO_RISO/NDVI/pred_NDVI2"
-CHECKPOINT = "RESULTS\Luciano_checkpoints_V-net/my_checkpoint.pth.tar"
-#CHECKPOINT = "saves/checkpoints/my_checkpoint_binary.pth.tar"
+CHECKPOINT = "RESULTS\Luciano_checkpoints_V-net/my_checkpoint.pth.tar" # for Vie-Net
+#CHECKPOINT = "saves/checkpoints/my_checkpoint_binary.pth.tar" # for bynary
 
 def load_checkpoint(checkpoint, model):
     print("=> Loading checkpoint")
