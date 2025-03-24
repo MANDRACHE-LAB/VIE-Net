@@ -72,7 +72,7 @@ def save_dir_name(dir_name):
             os.makedirs(dir_name)
             return dir_name
         else:
-            fn = save_dir_name(dir_name+"_old")
+            fn = save_dir_name(dir_name+"_new")
             return fn
 def main():
     
@@ -102,7 +102,7 @@ def main():
     if not os.path.exists(folder): 
         os.makedirs(folder) 
     else:
-         folder = save_dir_name(folder+"_old")
+         folder = save_dir_name(folder+"_new")
     save_predictions_as_imgs(pred_loader, model, folder, TYPE_DATASET, device=DEVICE)
   
 
