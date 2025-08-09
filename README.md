@@ -1,6 +1,10 @@
 # VIE-Net: regressive U-Net for Vegetation Index Estimation
 End-to-end non-generative model for NDVI estimate from calibrated RGB images. 
 
+<img width="780" height="493" alt="image" src="https://github.com/user-attachments/assets/0865246f-4fb3-4f17-a510-c6d1c9a5e235" />
+
+
+# VIE-Net: THE MODEL
 VIE-Net is a convolutional neural network based on a regressive version of the U-net architecture. 
 <img width="1572" height="1008" alt="image" src="https://github.com/user-attachments/assets/9cebc83c-9eee-47c9-9ab5-4c1d083b1a7d" />
 
@@ -14,5 +18,5 @@ Capparella, Valerio and Nemmi, Eugenio and violino, simona and Costa, Corrado an
 
 from Top to Bottom: Calibrated RGB image (through Menesatti et al. Sensors, 12 (2012), pp. 7063-7079); real NDVI map; predicted NDVI map with VIE-Net model.
 
-<img width="924" height="650" alt="image" src="https://github.com/user-attachments/assets/5fdc4e80-c978-4e7b-86d4-231b08439363" />
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/5fdc4e80-c978-4e7b-86d4-231b08439363" />
 NDVI squared Error Heat map between ground-truth and predicted NDVI values.
