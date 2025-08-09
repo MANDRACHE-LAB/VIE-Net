@@ -6,7 +6,7 @@ VIE-Net is a convolutional neural network based on a regressive version of the U
 
 
 If you use this model please cite the work as: 
-Capparella, Valerio and Nemmi, Eugenio and violino, simona and Costa, Corrado and Figorilli, Simone and Moscovini, Lavinia and Pallottino, Federico and Pane, Catello and Mei, Alessandro and ORTENZI, Luciano, Vie-Net: Regressive U-Net for Vegetation Index Estimation. Available at SSRN: https://ssrn.com/abstract=4873658 or http://dx.doi.org/10.2139/ssrn.4873658
+Capparella, Valerio and Nemmi, Eugenio and violino, simona and Costa, Corrado and Figorilli, Simone and Moscovini, Lavinia and Pallottino, Federico and Pane, Catello and Mei, Alessandro and ORTENZI, Luciano, Vie-Net: Regressive U-Net for Vegetation Index Estimation. Available at IEEE ACCESS.
 
 # VIE-Net: main results
 
