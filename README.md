@@ -18,5 +18,5 @@ Capparella, Valerio and Nemmi, Eugenio and violino, simona and Costa, Corrado an
 
 from Top to Bottom: Calibrated RGB image (through Menesatti et al. Sensors, 12 (2012), pp. 7063-7079); real NDVI map; predicted NDVI map with VIE-Net model.
 
-<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/5fdc4e80-c978-4e7b-86d4-231b08439363" />
+<img width="360" height="370" alt="image" src="https://github.com/user-attachments/assets/5fdc4e80-c978-4e7b-86d4-231b08439363" />
 NDVI squared Error Heat map between ground-truth and predicted NDVI values.
