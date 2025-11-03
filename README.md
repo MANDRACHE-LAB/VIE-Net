@@ -20,3 +20,6 @@ from Top to Bottom: Calibrated RGB image (through Menesatti et al. Sensors, 12 (
 
 <img width="360" height="370" alt="image" src="https://github.com/user-attachments/assets/5fdc4e80-c978-4e7b-86d4-231b08439363" />
 NDVI squared Error Heat map between ground-truth and predicted NDVI values.
+
+# PRE-TRAINED WEIGHTS:
+You can find the pre-trained weights in a new release: Vie-Net 1.0
