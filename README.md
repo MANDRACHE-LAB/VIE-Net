@@ -23,3 +23,4 @@ NDVI squared Error Heat map between ground-truth and predicted NDVI values.
 
 # PRE-TRAINED WEIGHTS:
 You can find the pre-trained weights in a new release: Vie-Net 1.0
+https://github.com/MANDRACHE-LAB/VIE-Net/releases/tag/mandrache
