@@ -1,7 +1,6 @@
 # VIE-Net: regressive U-Net for Vegetation Index Estimation
 End-to-end non-generative model for NDVI estimate from calibrated RGB images. 
 
-<img width="780" height="493" alt="image" src="https://github.com/user-attachments/assets/0865246f-4fb3-4f17-a510-c6d1c9a5e235" />
 
 
 # VIE-Net: THE MODEL
